@@ -1,0 +1,42 @@
+<!DOCTYPE html />
+<html lang="en"><head><link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/><meta charSet="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>fwoosh</title><style>
+            .ul li {
+              list-style-type: disc;
+              margin-left: 1.5rem;
+            }
+
+            .ol li {
+              list-style-type: decimal;
+              margin-left: 1.5rem;
+            }
+
+            .syntax-dark {
+              display: none;
+            }
+            
+            @media (prefers-color-scheme: dark) {
+              .syntax-light {
+                display: none;
+              }
+            
+              .syntax-dark {
+                display: block;
+              }
+            }            
+          </style></head><body><div id="root"><main><div class="flex flex-col items-center justify-center h-96" style="background:conic-gradient(at top right, #9CA3AF, white)"><h1 class="text-8xl text-gray-800 font-extralight mb-6">fwoosh</h1><p class="my-4 text-xl text-gray-500 font-semibold text-gray-800 dark:text-gray-300">A lightening quick MDX static website generator</p></div><div class="mx-auto my-16 max-w-2xl px-8"><h2 class="text-3xl text-center mb-10">A 💀 simple static website generator</h2><ul class="text-lg space-y-4"><li class="flex space-x-2 items-start"><div class="text-2xl">⚡️</div><div class="mt-0.5">Lightening quick builds powered by<!-- --> <a class="cursor-pointer text-blue-500 focus:outline-none focus-visible:ring hover:underline" href="https://esbuild.github.io/">esbuild</a></div></li><li class="flex space-x-2 items-start"><div class="text-2xl">🗄</div><div class="mt-0.5">File System Based Routing: New pages are as easy as adding a file</div></li><li class="flex space-x-2 items-start"><div class="text-2xl">📝</div><div class="mt-0.5">Pages can be authored in modern JavaScript,<!-- --> <a class="cursor-pointer text-blue-500 focus:outline-none focus-visible:ring hover:underline" href="https://www.typescriptlang.org/">TypeScript</a>, or <a class="cursor-pointer text-blue-500 focus:outline-none focus-visible:ring hover:underline" href="https://mdxjs.com/">MDX</a></div></li><li class="flex space-x-2 items-start"><div class="text-2xl">🎁</div><div class="mt-0.5">Build wrappers for you pages using<!-- --> <span class="font-semibold">Layouts</span></div></li><li class="flex space-x-2 items-start"><div class="text-2xl">🔌</div><div class="mt-0.5">Use plugins to build upon fwoosh, add your own assets, layouts, and more</div></li></ul></div><div class="bg-gray-200 rounded-xl w-20 h-2 mx-auto my-20"></div><div class="mx-auto my-16 max-w-2xl px-8"><h2 class="text-4xl mb-6">Getting Started</h2><p class="my-4 text-gray-800 dark:text-gray-300">First you need to install fwoosh.</p><pre class="bg-gray-200 rounded border my-6 dark:bg-gray-800 dark:border-gray-700" style="margin-top:1.5rem;margin-bottom:1.5rem"><code class="language-bash syntax-light text-gray-600 rounded block py-8 px-6 overflow-auto dark:bg-gray-800" style="background:#fff"><span style="color:#24292E">npm i --save-dev fwoosh</span>
+<!-- -->
+<span style="color:#6A737D"># Or when using yarn</span>
+<span style="color:#24292E">yarn add -D fwoosh</span>
+</code><code class="language-bash syntax-light syntax-dark text-gray-600 rounded block py-8 px-6 overflow-auto dark:bg-gray-800" style="background:#24292e"><span style="color:#E1E4E8">npm i --save-dev fwoosh</span>
+<!-- -->
+<span style="color:#6A737D"># Or when using yarn</span>
+<span style="color:#E1E4E8">yarn add -D fwoosh</span>
+</code></pre><p class="my-4 text-gray-800 dark:text-gray-300">Once installed you need to define the place where you are going to store your pages. The default is the <code class="text-gray-700 bg-gray-200 rounded dark:bg-gray-800 dark:text-gray-200" style="padding:2px 6px">docs/</code> <!-- -->folder, but this can be customized using the<!-- --> <code class="text-gray-700 bg-gray-200 rounded dark:bg-gray-800 dark:text-gray-200" style="padding:2px 6px">dir</code> option.</p><h3 class="lvl3 break-words text-xl relative font-bold mt-6 lg:text-2xl lg:font-semibold text-gray-900 dark:text-gray-200 mt-10">Usage</h3><p class="my-4 text-gray-800 dark:text-gray-300">The fwoosh cli comes with a few easy to use commands:</p><ul><li><span class="text-xl text-blue-500 font-semibold">clean</span><span>: Delete all of fwoosh&#x27;s build and output files</span></li><li><span class="text-xl text-blue-500 font-semibold">build</span><span>: Build your static website</span></li><li><span class="text-xl text-blue-500 font-semibold">dev</span><span>: Start the fwoosh development server</span></li></ul><p class="my-4 text-gray-800 dark:text-gray-300">To get more information about each command use the<!-- --> <code class="text-gray-700 bg-gray-200 rounded dark:bg-gray-800 dark:text-gray-200" style="padding:2px 6px">--help</code> flag.</p><pre class="bg-gray-200 rounded border my-6 dark:bg-gray-800 dark:border-gray-700" style="margin-top:1.5rem;margin-bottom:1.5rem"><code class="language-bash syntax-light text-gray-600 rounded block py-8 px-6 overflow-auto dark:bg-gray-800" style="background:#fff"><span style="color:#24292E">fwoosh --help</span>
+<!-- -->
+<span style="color:#6A737D"># Or get help for a specific command</span>
+<span style="color:#24292E">fwoosh build --help</span>
+</code><code class="language-bash syntax-light syntax-dark text-gray-600 rounded block py-8 px-6 overflow-auto dark:bg-gray-800" style="background:#24292e"><span style="color:#E1E4E8">fwoosh --help</span>
+<!-- -->
+<span style="color:#6A737D"># Or get help for a specific command</span>
+<span style="color:#E1E4E8">fwoosh build --help</span>
+</code></pre><h3 class="lvl3 break-words text-xl relative font-bold mt-6 lg:text-2xl lg:font-semibold text-gray-900 dark:text-gray-200 mt-10">Deploying</h3><p class="my-4 text-gray-800 dark:text-gray-300">To build your website for deploying use<!-- --> <code class="text-gray-700 bg-gray-200 rounded dark:bg-gray-800 dark:text-gray-200" style="padding:2px 6px">fwoosh build</code>. This creates a set of simple HTML and JS files that represent your static website. All you need to do is upload it to a server somewhere to be hosted. This can be a GitHub pages website, vercel, netlify, an s3 bucket, really anywhere you want 🎉</p></div></main></div><script type="module" src="index-client.js"></script></body></html>

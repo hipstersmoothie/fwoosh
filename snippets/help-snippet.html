@@ -1,0 +1,34 @@
+<!DOCTYPE html />
+<html lang="en"><head><link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/><meta charSet="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Document</title><style>
+            .ul li {
+              list-style-type: disc;
+              margin-left: 1.5rem;
+            }
+
+            .ol li {
+              list-style-type: decimal;
+              margin-left: 1.5rem;
+            }
+
+            .syntax-dark {
+              display: none;
+            }
+            
+            @media (prefers-color-scheme: dark) {
+              .syntax-light {
+                display: none;
+              }
+            
+              .syntax-dark {
+                display: block;
+              }
+            }            
+          </style></head><body><div id="root"><pre class="bg-gray-200 rounded border my-6 dark:bg-gray-800 dark:border-gray-700" style="margin-top:1.5rem;margin-bottom:1.5rem"><code class="language-bash syntax-light text-gray-600 rounded block py-8 px-6 overflow-auto dark:bg-gray-800" style="background:#fff"><span style="color:#24292E">fwoosh --help</span>
+<!-- -->
+<span style="color:#6A737D"># Or get help for a specific command</span>
+<span style="color:#24292E">fwoosh build --help</span>
+</code><code class="language-bash syntax-light syntax-dark text-gray-600 rounded block py-8 px-6 overflow-auto dark:bg-gray-800" style="background:#24292e"><span style="color:#E1E4E8">fwoosh --help</span>
+<!-- -->
+<span style="color:#6A737D"># Or get help for a specific command</span>
+<span style="color:#E1E4E8">fwoosh build --help</span>
+</code></pre></div><script type="module" src="snippets/help-snippet-client.js"></script></body></html>
